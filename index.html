@@ -83,7 +83,13 @@
                         Эффективные решения для вашего бизнеса
                     </h1>
                     <div class="top-btn">
-                        <button class="top-button">Заказать услугу</button>
+                        <button class="top-button" data-modal-open>Заказать услугу</button>
+                    </div>
+                    <div class="backdrop is-hidden" data-modal>
+                        <div class="modal">
+                            <button class="modal-btn" data-modal-close>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,30 +153,45 @@
             <div class="container">
                 <ul class="activities-list list-no-style">
                     <li>
+                        <div class="activities-thumb">
                         <img 
                             src="./images/images-page-1/activity-1.jpg" 
                             alt="imac" 
                             width="370" 
                             height="294"
                         />
+                        <div class="activities-thumb-text">
+                            Десктопные приложения
+                        </div>
+                        </div>
                     </li>
                     
                     <li>
+                        <div class="activities-thumb">
                         <img 
                             src="./images/images-page-1/activity-2.jpg"
                             alt="iphone" 
                             width="370" 
                             height="294"
                         />
+                        <div class="activities-thumb-text">
+                            Мобильные приложения
+                        </div>
+                        </div>  
                     </li>
                     
                     <li>
+                        <div class="activities-thumb">
                         <img 
                             src="./images/images-page-1/activity-3.jpg" 
                             alt="ipad" 
                             width="370" 
                             height="294"
                         />
+                        <div class="activities-thumb-text">
+                            Дизайнерские решения
+                        </div>
+                        </div>
                     </li>
                 </ul>
             </div>   
@@ -434,7 +455,6 @@
                     <li>
                         <a  class="clients-item-logos"
                             href=""
-                            class="clients-logo"
                             aria-label="clients-logo-2"
                         >
                             <svg class="clients-logo-2">
@@ -445,7 +465,6 @@
                     <li>
                         <a  class="clients-item-logos"
                             href=""
-                            class="clients-logo"
                             aria-label="clients-logo"
                         >
                             <svg class="clients-logo-3">
@@ -456,7 +475,6 @@
                     <li>
                         <a  class="clients-item-logos"
                             href=""
-                            class="clients-logo"
                             aria-label="clients-logo-4"
                         >
                             <svg class="clients-logo-4">
@@ -467,7 +485,6 @@
                     <li>
                         <a  class="clients-item-logos"
                             href=""
-                            class="clients-logo"
                             aria-label="clients-logo-5"
                         >
                             <svg class="clients-logo-5">
@@ -478,7 +495,6 @@
                     <li>
                         <a  class="clients-item-logos"
                             href=""
-                            class="clients-logo"
                             aria-label="clients-logo-6"
                         >
                             <svg class="clients-logo-6">
@@ -490,80 +506,96 @@
             </div>
         </section>
 
-            <!-- /clients -->
+    <!-- /clients -->
 
-          <!-- footer -->
-        <footer class="footer">
-            <div class="container">
-                    <div class="footer-contacts">
-                        <div class="logo">
-                            <a href="#" class="webstudio-logo-footer"
-                            >Web<span class="webstudio-white">Studio</span></a
+<!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-contacts">
+                <div class="logo">
+                    <a href="#" class="webstudio-logo-footer"
+                    >Web<span class="webstudio-white">Studio</span></a
+                    >
+                </div>
+                <div class="add">
+                    <address class="address"> 
+                        г. Киев, пр-т Леси Украинки, 26
+                    </address>
+                    <ul class="footer-list-contacts list-no-style">
+                        <li>
+                            <a href="malito:info@example.com"
+                            >info@example.com</a
                             >
-                        </div>
-                        <div class="add">
-                            <address class="address"> 
-                                г. Киев, пр-т Леси Украинки, 26
-                            </address>
-                            <ul class="footer-list-contacts list-no-style">
-                                <li>
-                                    <a href="malito:info@example.com"
-                                    >info@example.com</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="tel:+380991111111"
-                                    > +38 099 111 11 11</a
-                                    >
-                                </li>
-                            </ul> 
-                        </div>
-                    </div>
-                    <div class="footer-connect">
-                            <h3>присоединяйтесь</h3>
-                        <ul class="footer-list-icons list-no-style">
-                            <li>
-                                <a  href="" 
-                                    class="footer-item-icon" 
-                                    aria-label="icon-instagram"
-                                >
-                                    <svg class="footer-icon icon-instagram">
-                                        <use href="./images/sprite.svg#instagram"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a 
-                                    href="" 
-                                    class="footer-item-icon" 
-                                    aria-label="icon-twitter">
-                                    <svg class="footer-icon icon-twitter"> 
-                                        <use href="./images/sprite.svg#twitter"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a  href="" 
-                                    class="footer-item-icon" 
-                                    aria-label="icon-facebook">
-                                    <svg class="footer-icon icon-facebook">
-                                        <use href="./images/sprite.svg#facebook"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a  href="" 
-                                    class="footer-item-icon" 
-                                    aria-label="icon-linkedin">
-                                    <svg class="footer-icon icon-linkedin">
-                                        <use href="./images/sprite.svg#linkedin"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                        <li>
+                            <a href="tel:+380991111111"
+                            > +38 099 111 11 11</a
+                            >
+                        </li>
+                    </ul> 
+                </div>
             </div>
-        </footer>
-        <!-- /footer -->
+            <div class="footer-connect">
+                    <h3>присоединяйтесь</h3>
+                <ul class="footer-list-icons list-no-style">
+                    <li>
+                        <a  href="" 
+                            class="footer-item-icon" 
+                            aria-label="icon-instagram"
+                        >
+                            <svg class="footer-icon icon-instagram">
+                                <use href="./images/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            href="" 
+                            class="footer-item-icon" 
+                            aria-label="icon-twitter">
+                            <svg class="footer-icon icon-twitter"> 
+                                <use href="./images/sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="" 
+                            class="footer-item-icon" 
+                            aria-label="icon-facebook">
+                            <svg class="footer-icon icon-facebook">
+                                <use href="./images/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="" 
+                            class="footer-item-icon" 
+                            aria-label="icon-linkedin">
+                            <svg class="footer-icon icon-linkedin">
+                                <use href="./images/sprite.svg#linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+        <script>
+        (() => {
+            const refs = {
+              openModalBtn: document.querySelector('[data-modal-open]'),
+              closeModalBtn: document.querySelector('[data-modal-close]'),
+              modal: document.querySelector('[data-modal]'),
+            };
+          
+            refs.openModalBtn.addEventListener('click', toggleModal);
+            refs.closeModalBtn.addEventListener('click', toggleModal);
+          
+            function toggleModal() {
+              refs.modal.classList.toggle('is-hidden');
+            }
+          })();
+        </script>
     </body>
 </html>
