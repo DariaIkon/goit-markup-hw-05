@@ -79,13 +79,13 @@ header {
     line-height: 1.333;
     letter-spacing: 0.02em;
     color: var(--main-dark-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header a:hover,
 .header a:active,
 .header a:focus {
     color: var(--blue-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-studio-menu .link-studio {
     position: relative;
@@ -769,8 +769,8 @@ ul.team-list p {
     transform: translateY(100%);
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
- .box-portfolio:hover .portfolio-info-thumb,
- .box-portfolio:focus .portfolio-info-thumb  {
+ .box-portfolio-link:hover .portfolio-info-thumb,
+ .box-portfolio-link:focus .portfolio-info-thumb  {
      transform: translateY(0); 
      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);    
  }
